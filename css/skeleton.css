@@ -28,6 +28,23 @@
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+:root {
+  --background: white;
+  --text: 222;
+  --link: #116aff;
+  --hover: #116affbb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: black;
+    --text: white;
+    --link: #6ab1f1;
+    --hover: #6ab1f1bb;
+  }
+}
+
 .container {
   position: relative;
   width: 100%;
@@ -124,7 +141,8 @@ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  color: #222; }
+  background-color: var(--background);
+  color: var(--text); }
 
 
 /* Typography
@@ -157,9 +175,10 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #116aff; text-decoration: none; }
+  color: var(--link);
+  text-decoration: none; }
 a:hover {
-  color: #116affbb; }
+  color: var(--hover); }
 
 
 /* Buttons
