@@ -39,7 +39,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: black;
+    --background: #161617;
     --text: white;
     --link: #6ab1f1;
     --hover: #6ab1f1bb;
