@@ -1,0 +1,40 @@
+@font-face {
+  font-family: SFProRounded;
+  src: url(../fonts/SF-Pro-Rounded-Bold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: SFProRounded;
+  src: url(../fonts/SF-Pro-Rounded-Medium.otf);
+  font-weight: medium;
+}
+
+@font-face {
+  font-family: SFProRounded;
+  src: url(../fonts/SF-Pro-Rounded-Regular.otf);
+  font-weight: normal;
+}
+
+.oval {
+    height: 100%;
+    width: 400%;
+    left: -100%;
+    top: -40%;
+    background-image: linear-gradient(to right, #BB26D7, #5E23C1);
+    border-radius: 50%;
+    position: absolute;
+}
+
+@media (min-width: 680px) {
+    .oval {
+        height: 100%;
+        width: 180%;
+        left: -20%;
+        top: -40%;
+    }
+}
+
+.icon {
+    border: 5px solid #555;
+}
