@@ -38,3 +38,7 @@
 .icon {
     border: 5px solid #555;
 }
+
+body {
+    overflow-x: hidden;
+}
