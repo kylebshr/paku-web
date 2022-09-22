@@ -71,3 +71,14 @@ h4 {
     font-weight: 500;
     opacity: 0.9;
 }
+
+.faq-img {
+    max-width: 100%;
+    width: 393px;
+    margin-bottom: 20px;
+}
+
+.footer-link {
+    float: left;
+    margin-right: 20px;
+}

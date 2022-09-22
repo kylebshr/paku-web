@@ -37,16 +37,6 @@
   --secondary-text: #949494;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #161617;
-    --text: white;
-    --link: #6ab1f1;
-    --hover: #6ab1f1bb;
-    --secondary-text: #949494;
-  }
-}
-
 .container {
   position: relative;
   width: 100%;

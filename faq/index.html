@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Paku - Privacy Policy</title>
+  <title>Paku - Frequently Asked Questions</title>
   <!-- <meta name="description" content=""> -->
   <!-- <meta name="author" content=""> -->
 
@@ -37,34 +37,37 @@
 
         <br>
 
-        <h1>Paku Privacy Policy</h1>
+        <h1>Frequently Asked Questions</h1>
 
-        <h5>Personal Information</h5>
+        <h5>Why don’t the numbers on Paku match PurpleAir.com?</h5>
 
-        <p>Paku’s app developer cares deeply about your privacy. Besides the data that Apple provides to developers, Paku doesn’t collect any personal information and uses no analytics frameworks.</p>
+        <p>Paku and PurpleAir should closely match, as long as you have the same conversion settings on both the app and the website. Use the quick settings from the map to check this, or tap the gear to see both indoor and outdoor conversion settings. Note that Paku does not offer all the options that PurpleAir does.</p>
 
-        <h5>Location</h5>
+        <picture>
+          <source srcset="../images/faq-conversion-dark.png" media="(prefers-color-scheme: dark)">
+          <img class="faq-img" src="../images/faq-conversion.png">
+        </picture>
 
-        <p>Paku uses the location services of your device to determine which AQI values to display. The location data never leaves your device.</p>
+        <h5>Why isn’t my sensor showing up?</h5>
 
-        <h5>PurpleAir</h5>
+        <p>First, make sure your sensor is publicly visible, as Paku only displays public sensors. The app will learn about new sensors by refreshing once a week, since fetching the complete list of sensors is a large amount of data.</p>
 
-        <p>Paku uses PurpleAir sensor data. By using Paku, you are subject to <a href="https://www2.purpleair.com/policies/privacy-policy">PurpleAir’s Privacy Policy</a>. Your location is never sent to PurpleAir.</p>
+        <p>If you recently added a sensor to the network, you can force the app to manually refresh in the settings using the “Refresh Sensors” option.</p>
 
-        <h5>Updates</h5>
+        <picture>
+          <source srcset="../images/faq-refresh-dark.png" media="(prefers-color-scheme: dark)">
+          <img class="faq-img" src="../images/faq-refresh.png">
+        </picture>
 
-        <p>This policy may be updated at any time. You should check this page occasionally to ensure you are familiar with any changes.</p>
+        <h5>Why are some sensors grey?</h5>
 
-        <h5>Contact</h5>
-
-        <p>If you have questions or complaints concerning your data or this privacy policy, please email <a href="mailto:support@paku.app">support@paku.app</a>.</p>
+        <p>Sensors will show up as grey if they haven't reported new data recently, or if the data being reported has a low confidence - that is, it may be inaccurate. These sensors will not show up in widgets either - the nearest accurate sensor is automatically chosen when using the “Nearby” setting.</p>
 
         <div class="row" style="margin-top: 20%">
           <p class="footer-link"><a href="../index.html">Home</a></p>
-          <p class="footer-link"><a href="../faq/index.html">FAQ</a></p>
+          <p class="footer-link"><a href="../privacy/index.html">Privacy Policy</a></p>
           <p class="footer-link"><a href="https://twitter.com/PakuApp">Twitter</a></p>
         </div>
-
       </div>
     </div>
   </div>
