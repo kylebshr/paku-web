@@ -19,8 +19,9 @@
 .oval-container {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: calc(100% + env(safe-area-inset-top));
     overflow-x: hidden;
+    margin-top: -env(safe-area-inset-top);
 }
 
 .oval {
