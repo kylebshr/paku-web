@@ -71,6 +71,10 @@
     display: block;
 }
 
+h1 {
+    font-weight: 500;
+}
+
 h4 {
     font-weight: 500;
     opacity: 0.9;
