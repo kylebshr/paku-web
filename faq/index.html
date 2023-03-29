@@ -2,34 +2,23 @@
 <html lang="en">
 <head>
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>Paku - Frequently Asked Questions</title>
-  <!-- <meta name="description" content=""> -->
-  <!-- <meta name="author" content=""> -->
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/skeleton.css">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/light.css">
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" href="../favicon.ico" sizes="any">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../favicon-apple-touch.png">
 
 </head>
 <body>
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
   <div class="container">
 
     <div class="row">
@@ -46,8 +35,7 @@
         <p>Paku and PurpleAir should closely match, as long as you have the same conversion settings on both the app and the website. Tap the gear to see your conversion settings. Note that Paku does not offer all the options that PurpleAir does.</p>
 
         <picture>
-          <source srcset="../images/faq-conversion-dark.png" media="(prefers-color-scheme: dark)">
-          <img class="faq-img" src="../images/faq-conversion.png">
+          <source srcset="../images/faq-conversion-dark.png" media="(prefers-color-scheme: dark)"><img class="faq-img" src="../images/faq-conversion.png">
         </picture>
 
         <h5>Why isn’t my sensor showing up?</h5>
@@ -57,23 +45,30 @@
         <p>If you recently added a sensor to the network, you can force the app to manually refresh in the settings using the “Refresh Sensors” option.</p>
 
         <picture>
-          <source srcset="../images/faq-refresh-dark.png" media="(prefers-color-scheme: dark)">
-          <img class="faq-img" src="../images/faq-refresh.png">
+          <source srcset="../images/faq-refresh-dark.png" media="(prefers-color-scheme: dark)"><img class="faq-img" src="../images/faq-refresh.png">
         </picture>
-
+        
         <h5>Why are some sensors grey?</h5>
 
         <p>Sensors will show up as grey if they haven't reported new data recently, or if the data being reported has a low confidence - that is, it may be inaccurate. These sensors will not show up in widgets either - the nearest accurate sensor is automatically chosen when using the “Nearby” setting.</p>
-
-        <div class="row" style="margin-top: 20%">
-          <p class="footer-link"><a href="../index.html">Home</a></p>
-          <p class="footer-link"><a href="../privacy/index.html">Privacy Policy</a></p>
-          <p class="footer-link"><a href="https://twitter.com/PakuApp">Twitter</a></p>
-        </div>
       </div>
     </div>
   </div>
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <div class="container">
+    <div class="row" style="margin-top: max(10%, 60px); margin-bottom: max(5%, 60px);">
+      <div class="six columns">
+        <p class="footer-link"><a href="../privacy/index.html">Privacy Policy</a></p>
+        <p class="footer-link"><a href="../terms/index.html">Terms</a></p>
+        <p class="footer-link"><a href="../faq/index.html">FAQ</a></p>
+        <p class="footer-link"><a href="https://twitter.com/PakuApp">Twitter</a></p>
+        <p class="footer-link"><a href="https://testflight.apple.com/join/Ndg4Jy0F">TestFlight</a></p>
+      </div>
+      <div class="six columns">
+        <p class="made-with">Made with <span style="color: red;">♥</span> in Portland</p>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

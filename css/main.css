@@ -16,38 +16,46 @@
   font-weight: 400;
 }
 
-.oval-container {
-    position: absolute;
+.gradient {
+    background-image: linear-gradient(to bottom right, var(--header-gradient-start), var(--header-gradient-end));
+}
+
+.body-gradient {
+    background-image: linear-gradient(to bottom right, var(--body-gradient-start), var(--body-gradient-end));
+}
+
+.hide-mobile {
+    display: none;
+}
+
+.header-container {
+    padding-top: max(5%, 40px);
+    overflow: clip;
+}
+
+.body-container {
+    overflow: clip;
+}
+
+.paragraph {
+    padding-top: max(5%, 40px);
+    padding-bottom: max(5%, 40px);
+    display: flex; 
+    align-items: center;
+}
+
+.left-screenshot {
+    padding-top: max(5%, 40px);
+}
+
+.screenshot {
+    max-width: 100%;
+    overflow: clip;
+}
+
+.header-screenshot {
     width: 100%;
-    height: calc(100% + env(safe-area-inset-top));
-    overflow-x: hidden;
-    margin-top: -env(safe-area-inset-top);
-}
-
-.oval {
-    width: 240%;
-    padding-bottom: 120%;
-    left: -50%;
-    margin-top: calc(-120% + 320px);
-    background-image: linear-gradient(to right, #6031CC, #6D78FF);
-    border-radius: 50%;
-    position: absolute;
-}
-
-@media (min-width: 680px) {
-    .oval {
-        margin-top: calc(-120% + 360px);
-    }
-}
-
-@media (min-width: 980px) {
-    .oval {
-        margin-top: calc(-120% + 410px);
-    }
-}
-
-.icon {
-    border: 5px solid #555;
+    margin-bottom: -84%;
 }
 
 .phone {
@@ -93,4 +101,67 @@ p {
 .footer-link {
     float: left;
     margin-right: 20px;
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 680px) {
+  .body-container {
+    padding-top: max(5%, 20px);
+    padding-bottom: max(5%, 20px);
+  }
+
+  .image-row {
+    display: flex; 
+    align-items: middle;
+  }
+
+  .hide-mobile {
+    display: inline;
+  }
+
+  .screenshot {
+    overflow: revert;
+  }
+
+  .header-screenshot {
+    width: 80%;
+    padding-top: 4%;
+    padding-left: 10%;
+    margin-bottom: -60%;
+  }
+
+  .right-screenshot {
+    transform: rotate(0.015turn);
+  }
+
+  .left-screenshot {
+    transform: rotate(-0.015turn);
+    padding-top: revert;
+  }
+
+  .phone {
+    transform: rotate(-0.015turn) translate(10%);
+  }
+
+  .phone-header {
+    font-size: 1.4rem;
+  }
+
+  .made-with {
+    text-align: right;
+  }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .phone-header {
+    font-size: 1.7rem;
+  }
+}
+
+/* Larger than desktop */
+@media (min-width: 980px) {
+  .phone-header {
+    font-size: 2.2rem;
+  }
 }

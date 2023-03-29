@@ -30,11 +30,15 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 :root {
-  --background: #161617;
+  --background: #181820;
   --text: white;
   --link: #6ab1f1;
   --hover: #6ab1f1bb;
   --secondary-text: #949494;
+  --header-gradient-start: #6D78FF;
+  --header-gradient-end: #6031CC;
+  --body-gradient-start: #6D78FFcc;
+  --body-gradient-end: #6031CCcc;
 }
 
 .container {
@@ -151,7 +155,7 @@ h6 { font-size: 1.5rem; line-height: 1.6; color: var(--secondary-text); }
 
 /* Larger than phablet */
 @media (min-width: 550px) {
-  h1 { font-size: 5.0rem; }
+  h1 { font-size: 4.5rem; }
   h2 { font-size: 4.2rem; }
   h3 { font-size: 3.6rem; }
   h4 { font-size: 3.0rem; }
@@ -416,29 +420,13 @@ there.
 @media (min-width: 400px) {}
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 680px) {
-  .phone {
-    transform: rotate(-0.015turn) translate(10%);
-  }
-
-  .phone-header {
-    font-size: 1.4rem;
-  }
-}
+@media (min-width: 680px) {}
 
 /* Larger than tablet */
-@media (min-width: 750px) {
-  .phone-header {
-    font-size: 1.7rem;
-  }
-}
+@media (min-width: 750px) {}
 
 /* Larger than desktop */
-@media (min-width: 980px) {
-  .phone-header {
-    font-size: 2.2rem;
-  }
-}
+@media (min-width: 980px) {}
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
