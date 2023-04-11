@@ -37,6 +37,10 @@
     overflow: clip;
 }
 
+.press {
+    padding-top: max(5%, 40px);
+}
+
 .paragraph {
     padding-top: max(5%, 40px);
     padding-bottom: max(5%, 40px);
