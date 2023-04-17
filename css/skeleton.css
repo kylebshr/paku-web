@@ -32,13 +32,13 @@
 :root {
   --background: #181820;
   --text: white;
-  --link: #6ab1f1;
-  --hover: #6ab1f1bb;
+  --link: #5cc6ff;
+  --hover: #5cc6ffbb;
   --secondary-text: #949494;
   --header-gradient-start: #6D78FF;
   --header-gradient-end: #6031CC;
-  --body-gradient-start: #6D78FFcc;
-  --body-gradient-end: #6031CCcc;
+  --body-gradient-start: #6031CCcc;
+  --body-gradient-end: #6D78FFcc;
 }
 
 .container {
