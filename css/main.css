@@ -59,7 +59,14 @@
 
 .screenshot-img {
     width: 100%;
+}
+
+.screenshot-img-clipped {
     margin-bottom: -84%;
+}
+
+.screenshot-img-clipped-favorites {
+    margin-bottom: -74%;
 }
 
 h1 {
