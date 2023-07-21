@@ -32,8 +32,8 @@
 :root {
   --background: #181820;
   --text: white;
-  --link: #5cc6ff;
-  --hover: #5cc6ffbb;
+  --link: #c7c7ff;
+  --hover: #c7c7ffbb;
   --secondary-text: #949494;
   --header-gradient-start: #6D78FF;
   --header-gradient-end: #6031CC;
