@@ -23,6 +23,10 @@
     padding-top: max(5%, 40px);
 }
 
+.presskit-img {
+    width: 100%;
+}
+
 .paragraph {
     padding-top: max(5%, 40px);
     padding-bottom: max(5%, 40px);
