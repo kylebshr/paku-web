@@ -3,7 +3,7 @@
 }
 
 .body-gradient {
-    background-image: linear-gradient(to bottom right, var(--body-gradient-start), var(--body-gradient-end));
+    background-image: linear-gradient(to bottom left, var(--body-gradient-start), var(--body-gradient-end));
 }
 
 .hide-mobile {
@@ -12,7 +12,12 @@
 
 .header-container {
     padding-top: max(5%, 40px);
+    padding-bottom: max(5%, 40px);
     overflow: clip;
+}
+
+.devices {
+    margin-top: 2em;
 }
 
 .body-container {
@@ -48,16 +53,17 @@
 }
 
 .screenshot-img-clipped {
-    margin-bottom: -84%;
+    margin-bottom: -91%;
 }
 
-.screenshot-img-clipped-favorites {
-    margin-bottom: -74%;
+.screenshot-img-clipped-large {
+    margin-bottom: -52%;
 }
 
 h1 {
-    font-family: ui-rounded, -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-weight: 500;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    opacity: 0.85;
 }
 
 h4 {
@@ -101,18 +107,17 @@ p {
   }
 
   .screenshot-img {
-    width: 80%;
-    padding-top: 4%;
+    width: 60%;
     padding-left: 10%;
-    margin-bottom: -60%;
+    margin-bottom: -50%;
   }
 
   .right-screenshot {
-    transform: rotate(0.015turn);
+    transform: rotate(0.01turn);
   }
 
   .left-screenshot {
-    transform: rotate(-0.015turn);
+    transform: rotate(-0.01turn);
     padding-top: revert;
   }
 
