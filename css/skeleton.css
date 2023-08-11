@@ -30,15 +30,16 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 :root {
+  color-scheme: light dark;
   --background: #181820;
   --text: white;
   --link: #c7c7ff;
   --hover: #c7c7ffbb;
   --secondary-text: #949494;
-  --header-gradient-start: #6D78FF;
-  --header-gradient-end: #6031CC;
-  --body-gradient-start: #6031CCcc;
-  --body-gradient-end: #6D78FFcc;
+  --header-gradient-start: #3b1c7e;
+  --header-gradient-end: #171038;
+  --body-gradient-start: #171038;
+  --body-gradient-end: #3b1c7e;
 }
 
 .container {
@@ -132,7 +133,8 @@
 html is set to 62.5% so that all the REM measurements throughout Skeleton
 are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  background-color: var(--background); }
 body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;

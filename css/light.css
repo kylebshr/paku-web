@@ -7,7 +7,7 @@
     --secondary-text: #747474;
     --header-gradient-start: #f7f7f5;
     --header-gradient-end: #dcc5ff;
-    --body-gradient-start: #dcc5ff40;
-    --body-gradient-end: #f7f7f5aa;
+    --body-gradient-start: #dcc5ff;
+    --body-gradient-end: #f7f7f5;
   }
 }

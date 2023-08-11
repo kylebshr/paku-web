@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <meta name="google-site-verification" content="dMnkwtbbr39uwEOYzt8DTNLsD8zSoCp0sEQG5I8cwHk" />
-
   <meta charset="utf-8">
-  <title>Paku for PurpleAir - AQI App and Widget</title>
 
-  <meta name="description" content="Paku for PurpleAir - AQI App and Widget">
+  <!-- HTML Meta Tags -->
+  <title>Paku for PurpleAir - Air Quality App and Widget</title>
+  <meta name="description" content="Keep an eye on air quality with widgets, alerts, and more. Available on iOS, watchOS and macOS.">
+  <meta name="keywords" content="aqi,air,quality,index,fire,smoke,purple,air,purpleair,">
 
-  <meta name="twitter:card" content="summary_large_image"></meta>
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://paku.app">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Paku for PurpleAir - Air Quality App and Widget">
+  <meta property="og:description" content="Keep an eye on air quality with widgets, alerts, and more. Available on iOS, watchOS and macOS.">
+  <meta property="og:image" content="https://kylebshr.github.io/paku-web-staging/images/widget-card.png">
 
-  <meta property="og:title" content="Paku for PurpleAir" />
-  <meta property="og:description" content="Keep an eye on air quality with widgets, push notifications, and more. Available on iOS, watchOS and macOS." />
-  <meta property="og:image" content="https://paku.app/images/widget-card.png" />
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="paku.app">
+  <meta property="twitter:url" content="https://paku.app">
+  <meta name="twitter:title" content="Paku for PurpleAir - Air Quality App and Widget">
+  <meta name="twitter:description" content="Keep an eye on air quality with widgets, alerts, and more. Available on iOS, watchOS and macOS.">
+  <meta name="twitter:image" content="https://kylebshr.github.io/paku-web-staging/images/widget-card.png">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-itunes-app" content="app-id=1534130193">
+
+  <meta name="theme-color" content="#181820" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="white">
 
   <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Roboto'>
   <link rel="stylesheet" href="css/normalize.css">
@@ -33,42 +44,48 @@
   <meta name="theme-color" content="#ffffff">
 
   <script src="https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js" data-app-id="C65919C7-3E1A-4C1C-BBCB-D43E38E60406"></script>
+  <meta name="google-site-verification" content="dMnkwtbbr39uwEOYzt8DTNLsD8zSoCp0sEQG5I8cwHk" />
+
+  <style>
+    .container {
+      max-width: 1140px;
+    }
+  </style>
 
 </head>
 <body>
   <div class="header-container gradient">
     <div class="container">
       <div class="row image-row">
-        <div class="seven columns" style="margin-bottom: 4em;">
+        <div class="five columns" style="display: inline-block; float: none; vertical-align: middle;">
           <a href="https://apps.apple.com/us/app/paku-aqi-widget/id1534130193">
             <picture>
-              <source style="margin-left: auto; margin-right: auto; display: block;" srcset="images/app-icon-web-dark@1x.png, images/app-icon-web-dark@2x.png 2x, images/app-icon-web-dark@3x.png 3x" media="(prefers-color-scheme:dark)">
+              <source style="margin-left: auto; margin-right: auto; display: block;">
                 <img srcset="images/app-icon-web@1x.png, images/app-icon-web@2x.png 2x, images/app-icon-web@3x.png 3x" src="images/app-icon-web@1x.png" width="100" height="100" alt="The Paku logo, an icon that represents wind">
             </picture>
           </a>
           <br>
           <h1 style="margin-bottom: 0.5em; margin-top: 0.5em;">Paku for PurpleAir</h1>
-          <h4>Keep an eye on air quality with widgets, push notifications, and more.</h4>
+          <h4>Keep an eye on air quality with widgets, alerts, and&nbsp;more.</h4>
           <br>
           <a href="https://apps.apple.com/us/app/paku-aqi-widget/id1534130193"><img width="150px" src="images/app-store-badge.svg" alt="Download on the App Store"></a>
         </div>
-        <div class="five columns">
-          <div class="screenshot">
-            <img class="right-screenshot screenshot-img screenshot-img-clipped" srcset="images/phone-widget@1x.png, images/phone-widget@2x.png 2x, images/phone-widget@3x.png 3x" src="images/phone-widget@1x.png" alt="Screenshot of an iPhone lock screen with a notification regarding bad air quality from Paku.">
-          </div>
-        </div>
+        <img class="seven columns devices" style="display: inline-block; vertical-align: middle; object-fit: contain;" srcset="images/devices@1x.png, images/devices@2x.png 2x, images/devices@3x.png 3x" src="images/devices@1x.png" alt="A MacBook, iPad, iPhone and Apple Watch all running Paku, an air quality app.">
       </div>
     </div>
   </div>
 
   <div class="container body-container">
     <div class="row image-row">
-      <div class="five columns">
+      <div class="six columns">
         <div class="screenshot">
-          <img class="left-screenshot screenshot-img" srcset="images/phone-map@1x.png, images/phone-map@2x.png 2x, images/phone-map@3x.png 3x" src="images/phone-map@1x.png" alt="Screenshot showing a map of San Francisco with PurpleAir sensors showing air quality on the map.">
+          <picture>
+            <source srcset="images/phone-1-dark@1x.png, images/phone-1-dark@2x.png 2x, images/phone-1-dark@3x.png 3x" media="(prefers-color-scheme:dark)">
+            <img class="left-screenshot screenshot-img screenshot-img-clipped-large" srcset="images/phone-1@1x.png, images/phone-1@2x.png 2x, images/phone-1@3x.png 3x" src="images/phone-1@1x.png" alt="Screenshot showing a map of San Francisco with PurpleAir sensors showing air quality on the map.">
+          </picture>
         </div>
       </div>
-      <div class="seven columns paragraph">
+      <div class="six columns paragraph">
         <div>
           <h1>Like a breath of fresh&nbsp;air</h1>
           <h4>Fast and lightweight, Paku loads every sensor on the map instantly.</h4>
@@ -80,15 +97,18 @@
   <div class="body-gradient">
     <div class="container body-container">
       <div class="row image-row">
-        <div class="seven columns paragraph">
+        <div class="six columns paragraph">
           <div>
-            <h1>More than AQI</h1>
-            <h4>Real-time, hyperlocal temperature and humidity – on the map and in widgets.</h4>
+          <h1>Gorgeous Charts and Widgets</h1>
+          <h4>See how air quality, temperature, and humidity are trending with up to one week of historical data.</h4>
           </div>
         </div>
-        <div class="five columns">
+        <div class="six columns">
           <div class="screenshot">
-            <img class="right-screenshot screenshot-img screenshot-img-clipped" srcset="images/phone-correction@1x.png, images/phone-correction@2x.png 2x, images/phone-correction@3x.png 3x" src="images/phone-correction@1x.png" alt="Screenshot showing a map of San Francisco with PurpleAir sensors showing humidity on the map. An open menu shows the option to choose from air quality, temperature, or humidity.">
+            <picture>
+              <source srcset="images/phone-2-dark@1x.png, images/phone-2-dark@2x.png 2x, images/phone-2-dark@3x.png 3x" media="(prefers-color-scheme:dark)">
+              <img class="right-screenshot screenshot-img screenshot-img-clipped" srcset="images/phone-2@1x.png, images/phone-2@2x.png 2x, images/phone-2@3x.png 3x" src="images/phone-2@1x.png" alt="Screenshot of chart widgets on the iOS home screen for AQI, temperature, and raw PM10.0.">
+            </picture>
           </div>
         </div>
       </div>
@@ -97,14 +117,17 @@
 
   <div class="container body-container">
     <div class="row image-row">
-      <div class="five columns">
+      <div class="six columns">
         <div class="screenshot">
-          <img class="left-screenshot screenshot-img screenshot-img-clipped" srcset="images/phone-alerts@1x.png, images/phone-alerts@2x.png 2x, images/phone-alerts@3x.png 3x" src="images/phone-alerts@1x.png" alt="Screenshot of the app settings showing various alerts configured for sensors.">
+          <picture>
+            <source srcset="images/phone-3-dark@1x.png, images/phone-3-dark@2x.png 2x, images/phone-3-dark@3x.png 3x" media="(prefers-color-scheme:dark)">
+            <img class="left-screenshot screenshot-img screenshot-img-clipped" srcset="images/phone-3@1x.png, images/phone-3@2x.png 2x, images/phone-3@3x.png 3x" src="images/phone-3@1x.png" alt="Screenshot of an iPhone lock screen with a notification regarding bad air quality from Paku.">
+          </picture>
         </div>
       </div>
-      <div class="seven columns paragraph">
+      <div class="six columns paragraph">
         <div>
-          <h1>Stay in the Know</h1>
+          <h1>Stay In-the-Know</h1>
           <h4>Set up alerts and get real-time notifications when air quality goes south.</h4>
         </div>
       </div>
@@ -114,15 +137,20 @@
   <div class="body-gradient">
     <div class="container body-container">
       <div class="row image-row">
-        <div class="seven columns paragraph">
+        <div class="six columns paragraph">
           <div>
             <h1>Everything Else</h1>
-            <h4>Favorites. Private sensors. watchOS and macOS support. Paku can do it all. Missing a feature you’d like? <a href="mailto: support@paku.app">Reach out ↗</a></h4>
+            <h4>Favorites. Private sensors. watchOS and macOS support. Paku can do it all. Missing a feature you’d like? <a href="mailto: support@paku.app">Reach&nbsp;out&nbsp;↗</a></h4>
+            <br>
+            <a href="https://apps.apple.com/us/app/paku-aqi-widget/id1534130193"><img width="150px" src="images/app-store-badge.svg" alt="Download on the App Store"></a>
           </div>
         </div>
-        <div class="five columns">
+        <div class="six columns">
           <div class="screenshot">
-            <img class="right-screenshot screenshot-img screenshot-img-clipped-favorites" srcset="images/phone-favorites@1x.png, images/phone-favorites@2x.png 2x, images/phone-favorites@3x.png 3x" src="images/phone-favorites@1x.png" alt="Screenshot of a favorites list that displays data from favorited sensors.">
+            <picture>
+              <source srcset="images/phone-4-dark@1x.png, images/phone-4-dark@2x.png 2x, images/phone-4-dark@3x.png 3x" media="(prefers-color-scheme:dark)">
+              <img class="right-screenshot screenshot-img screenshot-img-clipped-large" srcset="images/phone-4@1x.png, images/phone-4@2x.png 2x, images/phone-4@3x.png 3x" src="images/phone-4@1x.png" alt="Screenshot of a favorites list that displays data from favorited sensors.">
+            </picture>
           </div>
         </div>
       </div>
