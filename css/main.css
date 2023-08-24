@@ -113,11 +113,11 @@ p {
   }
 
   .right-screenshot {
-    transform: rotate(0.01turn);
+    transform: rotate(0.008turn);
   }
 
   .left-screenshot {
-    transform: rotate(-0.01turn);
+    transform: rotate(-0.008turn);
     padding-top: revert;
   }
 
