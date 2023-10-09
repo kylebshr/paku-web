@@ -40,6 +40,7 @@
   --header-gradient-end: #171038;
   --body-gradient-start: #171038;
   --body-gradient-end: #3b1c7e;
+  --pro-tag: #552fa8;
 }
 
 .container {
@@ -304,7 +305,7 @@ label > .label-body {
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
-  list-style: circle inside; }
+  list-style: disc inside; }
 ol {
   list-style: decimal inside; }
 ol, ul {
@@ -314,10 +315,9 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
-  font-size: 90%; }
+  margin: 0 0 1.5rem 3rem; }
 li {
-  margin-bottom: 1rem; }
+font-size: 1.2em; }
 
 
 /* Code
