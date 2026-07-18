@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Pull framed marketing screenshots from the paku-ios generated folder into
-# the website, generating @2x and @3x variants, and rebuild the press kit zip.
+# the website as full-resolution WebP, and rebuild the press kit zip.
 #
 # Usage: scripts/update-screenshots.sh [path-to-generated-screenshots]
 #        (defaults to ../paku-ios/Marketing/generated/iphone-17)
@@ -21,7 +21,7 @@ fi
 # Screenshots used on the website (framed variants; dark copied when present).
 SHOTS=(sf-home home-widgets lock-widgets bay-temperature)
 
-echo "==> Generating @2x/@3x website assets"
+echo "==> Generating website assets"
 for base in "${SHOTS[@]}"; do
   for variant in "" "-dark"; do
     src="$SRC/${base}${variant}-framed.png"
@@ -38,9 +38,8 @@ for base in "${SHOTS[@]}"; do
       echo "       Regenerate with paku-ios scripts/screenshots (downscale step removed)." >&2
       exit 1
     fi
-    magick "$src" -quality 82 "$IMAGES/${name}@3x.webp"
-    magick "$src" -resize 66.6667% -quality 82 "$IMAGES/${name}@2x.webp"
-    echo "    $name@3x.webp, $name@2x.webp"
+    magick "$src" -quality 82 "$IMAGES/${name}.webp"
+    echo "    $name.webp"
   done
 done
 
