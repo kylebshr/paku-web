@@ -38,9 +38,9 @@ for base in "${SHOTS[@]}"; do
       echo "       Regenerate with paku-ios scripts/screenshots (downscale step removed)." >&2
       exit 1
     fi
-    cp "$src" "$IMAGES/${name}@3x.png"
-    magick "$src" -resize 66.6667% "$IMAGES/${name}@2x.png"
-    echo "    $name@3x.png, $name@2x.png"
+    magick "$src" -quality 82 "$IMAGES/${name}@3x.webp"
+    magick "$src" -resize 66.6667% -quality 82 "$IMAGES/${name}@2x.webp"
+    echo "    $name@3x.webp, $name@2x.webp"
   done
 done
 
