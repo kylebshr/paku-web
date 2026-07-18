@@ -35,29 +35,46 @@
 .paragraph {
     padding-top: max(5%, 40px);
     padding-bottom: max(5%, 40px);
-    display: flex; 
+    display: flex;
     align-items: center;
 }
 
-.left-screenshot {
-    padding-top: max(5%, 40px);
+/* On mobile, text always comes before its screenshot. */
+.body-container .image-row {
+    display: flex;
+    flex-direction: column;
 }
 
+.body-container .paragraph {
+    order: -1;
+    padding-bottom: 10px;
+}
+
+/* On mobile every screenshot renders in a uniform fixed-aspect window;
+   object-position picks which end of the phone the window shows. */
 .screenshot {
     max-width: 100%;
     overflow: hidden;
+    aspect-ratio: 10 / 11.2;
+}
+
+/* The bottom-anchored shot gets a shorter window. */
+.screenshot:has(.screenshot-img-clipped-bottom) {
+    aspect-ratio: 10 / 9;
 }
 
 .screenshot-img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
 }
 
-.screenshot-img-clipped {
-    margin-bottom: -91%;
-}
-
-.screenshot-img-clipped-large {
-    margin-bottom: -52%;
+/* Bottom-anchored shot shows its full bezel, so give it breathing room
+   above the section edge (the height is reset on desktop). */
+.screenshot-img-clipped-bottom {
+    object-position: bottom;
+    height: calc(100% - 32px);
 }
 
 h1 {
@@ -106,23 +123,37 @@ p {
     padding-bottom: max(5%, 20px);
   }
 
-  .image-row {
-    display: flex; 
+  .image-row,
+  .body-container .image-row {
+    display: flex;
+    flex-direction: row;
     align-items: middle;
+  }
+
+  .body-container .paragraph {
+    order: 0;
+    padding-bottom: max(5%, 40px);
   }
 
   .hide-mobile {
     display: inline;
   }
 
-  .screenshot {
+  .screenshot,
+  .screenshot:has(.screenshot-img-clipped-bottom) {
     overflow: revert;
+    aspect-ratio: auto;
   }
 
   .screenshot-img {
     width: 60%;
     padding-left: 20%;
+    height: auto;
     margin-bottom: -50%;
+  }
+
+  .screenshot-img-clipped-bottom {
+    margin-top: -91%;
   }
 
   .right-screenshot {
@@ -131,7 +162,6 @@ p {
 
   .left-screenshot {
     transform: rotate(-0.008turn);
-    padding-top: revert;
   }
 
   .made-with {
