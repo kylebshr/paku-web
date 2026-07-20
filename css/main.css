@@ -55,12 +55,7 @@
 .screenshot {
     max-width: 100%;
     overflow: hidden;
-    aspect-ratio: 10 / 11.2;
-}
-
-/* The bottom-anchored shot gets a shorter window. */
-.screenshot:has(.screenshot-img-clipped-bottom) {
-    aspect-ratio: 10 / 9;
+    aspect-ratio: 10 / 11.25;
 }
 
 .screenshot-img {
