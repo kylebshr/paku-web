@@ -1,0 +1,7 @@
+url: "https://paku.app"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - scripts/
