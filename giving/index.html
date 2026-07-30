@@ -86,9 +86,12 @@
               month.className = 'donation-month';
               month.textContent = monthLabel(recipient.month);
 
+              // The charity's page is the first action's URL (e.g. "Learn more").
+              var action = (recipient.actions || [])[0];
+
               var link = document.createElement('a');
               link.className = 'donation-name';
-              link.href = recipient.url;
+              link.href = action ? action.url : recipient.receiptURL;
               link.target = '_blank';
               link.rel = 'noopener';
               link.textContent = recipient.name + ' ↗';
