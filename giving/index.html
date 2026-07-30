@@ -46,9 +46,7 @@
         <p>Each month, I donate 15% of Paku’s earnings to a charity fighting climate change or reducing the impact of wildfires. Receipts for each donation are listed below.</p>
 
         <ul class="donation-list">
-          <!-- Add new donations at the top:
-          <li><span class="donation-month">July 2026</span> <a href="receipts/2026-07-charity-name.pdf" target="_blank">Charity Name</a></li>
-          -->
+          <!-- Populated from the Paku API; see the script at the bottom of the page. -->
         </ul>
       </div>
     </div>
@@ -69,6 +67,55 @@
       </div>
     </div>
   </div>
+
+  <script>
+    (function () {
+      var list = document.querySelector('.donation-list');
+
+      var monthNames = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+      ];
+
+      // "2026-07" -> "July 2026"
+      function monthLabel(month) {
+        var parts = month.split('-');
+        var name = monthNames[Number(parts[1]) - 1];
+        return name ? name + ' ' + parts[0] : month;
+      }
+
+      fetch('https://api.paku.app/donation-recipients')
+        .then(function (response) {
+          if (!response.ok) { throw new Error('HTTP ' + response.status); }
+          return response.json();
+        })
+        .then(function (recipients) {
+          recipients
+            .filter(function (recipient) { return recipient.receiptURL; })
+            .reverse() // The API sorts oldest first; show the newest donation at the top.
+            .forEach(function (recipient) {
+              var month = document.createElement('span');
+              month.className = 'donation-month';
+              month.textContent = monthLabel(recipient.month);
+
+              var link = document.createElement('a');
+              link.href = recipient.receiptURL;
+              link.target = '_blank';
+              link.rel = 'noopener';
+              link.textContent = recipient.title;
+
+              var item = document.createElement('li');
+              item.appendChild(month);
+              item.appendChild(document.createTextNode(' '));
+              item.appendChild(link);
+              list.appendChild(item);
+            });
+        })
+        .catch(function () {
+          // Leave the list empty rather than showing an error on the page.
+        });
+    })();
+  </script>
 
 </body>
 </html>
