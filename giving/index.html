@@ -48,78 +48,22 @@
         <p>Each month, I donate at least 15% of Paku’s monthly recurring revenue to an organization fighting climate change or reducing the impact of wildfires. Every donation is listed below, with a receipt showing the amount. My monthly recurring revenue is reported by RevenueCat and publicly verifiable <a href="https://verified.revenuecat.com/paku" target="_blank">here</a>.</p>
 
         <ul class="donation-list">
-          <!-- Populated from the Paku API; see the script at the bottom of the page. -->
+          <li>
+            <span class="donation-month">August 2026</span>
+            <a class="donation-name" href="https://www.givinggreen.earth/giving-green-fund" target="_blank" rel="noopener">Giving Green Fund ↗</a>
+            <span class="donation-receipt">In progress</span>
+          </li>
+          <li>
+            <span class="donation-month">July 2026</span>
+            <a class="donation-name" href="https://www.zeffy.com/en-US/donation-form/the-confederated-tribes-of-the-warm-springs-reservation-of-oregon-ctws-wildfire-recovery-fund" target="_blank" rel="noopener">CTWS Wildfire Recovery Fund ↗</a>
+            <a class="donation-receipt" href="receipts/ctws-wildfire-recovery-fund.pdf" target="_blank" rel="noopener">Receipt</a>
+          </li>
         </ul>
       </div>
     </div>
   </div>
 
   {% include footer.html %}
-
-  <script>
-    (function () {
-      var list = document.querySelector('.donation-list');
-
-      var monthNames = [
-        'January', 'February', 'March', 'April', 'May', 'June',
-        'July', 'August', 'September', 'October', 'November', 'December'
-      ];
-
-      // "2026-07" -> "July 2026"
-      function monthLabel(month) {
-        var parts = month.split('-');
-        var name = monthNames[Number(parts[1]) - 1];
-        return name ? name + ' ' + parts[0] : month;
-      }
-
-      fetch('https://api.paku.app/donation-recipients')
-        .then(function (response) {
-          if (!response.ok) { throw new Error('HTTP ' + response.status); }
-          return response.json();
-        })
-        .then(function (recipients) {
-          recipients
-            .filter(function (recipient) { return recipient.receiptURL; })
-            .reverse() // The API sorts oldest first; show the newest donation at the top.
-            .forEach(function (recipient) {
-              var month = document.createElement('span');
-              month.className = 'donation-month';
-              month.textContent = monthLabel(recipient.month);
-
-              // url is null when a recipient has no charity link; show
-              // the name as plain text in that case.
-              var link;
-              if (recipient.url) {
-                link = document.createElement('a');
-                link.href = recipient.url;
-                link.target = '_blank';
-                link.rel = 'noopener';
-                link.textContent = recipient.name + ' ↗';
-              } else {
-                link = document.createElement('span');
-                link.textContent = recipient.name;
-              }
-              link.className = 'donation-name';
-
-              var receipt = document.createElement('a');
-              receipt.className = 'donation-receipt';
-              receipt.href = recipient.receiptURL;
-              receipt.target = '_blank';
-              receipt.rel = 'noopener';
-              receipt.textContent = 'Receipt';
-
-              var item = document.createElement('li');
-              item.appendChild(month);
-              item.appendChild(link);
-              item.appendChild(receipt);
-              list.appendChild(item);
-            });
-        })
-        .catch(function () {
-          // Leave the list empty rather than showing an error on the page.
-        });
-    })();
-  </script>
 
 </body>
 </html>
