@@ -48,6 +48,8 @@ tmp="$(mktemp -d)"
 trap 'rm -rf "$tmp"' EXIT
 mkdir "$tmp/images"
 cp "$SRC"/*.png "$tmp/images/"
+# Include the composed press images shown in the press kit gallery.
+cp "$IMAGES"/press-7-*.png "$tmp/images/"
 (cd "$tmp" && zip -q -r -X images.zip images)
 mv "$tmp/images.zip" "$PRESS_ZIP"
 echo "    $(unzip -l "$PRESS_ZIP" | tail -1 | awk '{print $2}') files -> press/images.zip"
