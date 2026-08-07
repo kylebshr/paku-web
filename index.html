@@ -55,7 +55,9 @@
 
 </head>
 <body>
-  <div class="header-container gradient">
+  <div class="body-flow">
+
+  <div class="header-container">
     <div class="container">
       <div class="row image-row">
         <div class="five columns" style="display: inline-block; float: none; vertical-align: middle;">
@@ -72,6 +74,27 @@
           <a href="https://apps.apple.com/app/apple-store/id1534130193?pt=117796349&ct=pakuweb&mt=8"><img width="150px" src="images/app-store-badge.svg" alt="Download on the App Store"></a>
         </div>
         <img class="seven columns devices" style="display: inline-block; vertical-align: middle; object-fit: contain;" src="images/devices.webp" alt="A MacBook, iPad, iPhone and Apple Watch all running Paku, an air quality app.">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="press-strip">
+      <h4 class="press-strip-label">Featured in</h4>
+      <div class="press-logos">
+        <a class="press-logo press-logo-wapo" href="https://www.washingtonpost.com/technology/2023/06/07/best-air-quality-apps-wildfire-smoke/" target="_blank" aria-label="The Washington Post">{% include press/wapo.svg %}</a>
+        <a class="press-logo press-logo-macstories" href="https://www.macstories.net/reviews/paku-hyper-local-air-quality-tracking-on-every-apple-platform//" target="_blank" aria-label="MacStories">{% include press/macstories.svg %}</a>
+        <span class="press-break press-break-narrow"></span>
+        <a class="press-logo press-logo-sixcolors" href="https://sixcolors.com/member/2021/07/getting-a-handle-on-outdoor-air-quality/" target="_blank" aria-label="Six Colors"><span class="sixcolors-mask"></span></a>
+        <a class="press-logo press-logo-macworld" href="https://www.macworld.com/article/1069071/ios-16-lock-screen-widget-third-party-apps.html" target="_blank" aria-label="Macworld">Macworld</a>
+        <span class="press-break press-break-narrow press-break-mid"></span>
+        <a class="press-logo press-logo-macrumors" href="https://www.macrumors.com/guide/ios-16-lock-screen-widget-apps/" target="_blank" aria-label="MacRumors">{% include press/macrumors.svg %}</a>
+        <a class="press-logo press-logo-mashable" href="https://mashable.com/article/los-angeles-wildfires-how-to-check-air-quality-near-you" target="_blank" aria-label="Mashable">{% include press/mashable.svg %}</a>
+        <span class="press-break press-break-narrow"></span>
+        <a class="press-badge" href="https://developer.apple.com/articles/paku/" target="_blank">
+          {% include press/apple.svg %}
+          <span class="press-badge-text">Featured by<br><strong>Apple&nbsp;Developer</strong></span>
+        </a>
       </div>
     </div>
   </div>
@@ -95,21 +118,19 @@
     </div>
   </div>
 
-  <div class="body-gradient">
-    <div class="container body-container">
-      <div class="row image-row">
-        <div class="six columns paragraph">
-          <div>
-          <h1>Gorgeous Charts and Widgets</h1>
-          <h4>See how air quality, temperature, and humidity are trending with up to one week of historical data.</h4>
-          </div>
+  <div class="container body-container">
+    <div class="row image-row">
+      <div class="six columns paragraph">
+        <div>
+        <h1>Gorgeous Charts and Widgets</h1>
+        <h4>See how air quality, temperature, and humidity are trending with up to one week of historical data.</h4>
         </div>
-        <div class="six columns">
-          <div class="screenshot">
-            <picture>
-              <img class="right-screenshot screenshot-img" loading="lazy" src="images/home-widgets-framed.webp" alt="Screenshot of chart widgets on the iOS home screen for AQI, temperature, and raw PM10.0.">
-            </picture>
-          </div>
+      </div>
+      <div class="six columns">
+        <div class="screenshot">
+          <picture>
+            <img class="right-screenshot screenshot-img" loading="lazy" src="images/home-widgets-framed.webp" alt="Screenshot of chart widgets on the iOS home screen for AQI, temperature, and raw PM10.0.">
+          </picture>
         </div>
       </div>
     </div>
@@ -133,24 +154,22 @@
     </div>
   </div>
 
-  <div class="body-gradient">
-    <div class="container body-container">
-      <div class="row image-row">
-        <div class="six columns paragraph">
-          <div>
-            <h1>Everything Else</h1>
-            <h4>Favorites. Private sensors. watchOS and macOS support. Paku can do it all. Missing a feature you’d like? <a href="mailto: support@paku.app">Reach&nbsp;out&nbsp;↗</a></h4>
-            <br>
-            <a href="https://apps.apple.com/app/apple-store/id1534130193?pt=117796349&ct=pakuweb&mt=8"><img width="150px" src="images/app-store-badge.svg" alt="Download on the App Store"></a>
-          </div>
+  <div class="container body-container">
+    <div class="row image-row">
+      <div class="six columns paragraph">
+        <div>
+          <h1>Everything Else</h1>
+          <h4>Favorites. Private sensors. watchOS and macOS support. Paku can do it all. Missing a feature you’d like? <a href="mailto: support@paku.app">Reach&nbsp;out&nbsp;↗</a></h4>
+          <br>
+          <a href="https://apps.apple.com/app/apple-store/id1534130193?pt=117796349&ct=pakuweb&mt=8"><img width="150px" src="images/app-store-badge.svg" alt="Download on the App Store"></a>
         </div>
-        <div class="six columns">
-          <div class="screenshot">
-            <picture>
-              <source srcset="images/bay-temperature-dark-framed.webp" media="(prefers-color-scheme:dark)">
-              <img class="right-screenshot screenshot-img" loading="lazy" src="images/bay-temperature-framed.webp" alt="Screenshot of a map of the San Francisco Bay Area showing temperature readings, with a menu for switching between air quality, temperature, humidity, and PM2.5.">
-            </picture>
-          </div>
+      </div>
+      <div class="six columns">
+        <div class="screenshot">
+          <picture>
+            <source srcset="images/bay-temperature-dark-framed.webp" media="(prefers-color-scheme:dark)">
+            <img class="right-screenshot screenshot-img" loading="lazy" src="images/bay-temperature-framed.webp" alt="Screenshot of a map of the San Francisco Bay Area showing temperature readings, with a menu for switching between air quality, temperature, humidity, and PM2.5.">
+          </picture>
         </div>
       </div>
     </div>
@@ -194,6 +213,8 @@
   </div>
 
   {% include footer.html %}
+
+  </div>
 
 </body>
 </html>

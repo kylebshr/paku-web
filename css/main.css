@@ -2,8 +2,30 @@
     background-image: linear-gradient(to bottom right, var(--header-gradient-start), var(--header-gradient-end));
 }
 
-.body-gradient {
-    background-image: linear-gradient(to bottom left, var(--body-gradient-start), var(--body-gradient-end));
+/* One continuous backdrop for the whole page (hero through footer): soft
+   glows drift from side to side down the page, so there are no hard band
+   edges to break. The top two layers rebuild the old hero gradient. */
+.body-flow {
+    --glow-soft: color-mix(in srgb, var(--glow) 45%, transparent);
+    --gw-hero: 120%;
+    --gw-hero2: 90%;
+    --gw: 100%;
+    background-image:
+        radial-gradient(var(--gw-hero) 16% at 10% 0%, var(--glow-soft), transparent 75%),
+        radial-gradient(var(--gw-hero2) 12% at 25% 3%, var(--glow-soft), transparent 75%),
+        radial-gradient(var(--gw) 24% at 100% 32%, var(--glow-soft), transparent 70%),
+        radial-gradient(var(--gw) 24% at 0% 58%, var(--glow-soft), transparent 70%),
+        radial-gradient(var(--gw) 24% at 100% 88%, var(--glow-soft), transparent 70%);
+}
+
+/* Narrow screens are tall relative to their width, so percent-sized glows
+   turn into skinny slivers; widen them to keep the wash spanning the page. */
+@media (max-width: 679px) {
+  .body-flow {
+    --gw-hero: 300%;
+    --gw-hero2: 220%;
+    --gw: 260%;
+  }
 }
 
 .hide-mobile {
@@ -25,7 +47,129 @@
 }
 
 .press {
-    padding-top: max(5%, 40px);
+    padding-top: 48px;
+}
+
+/* "Featured in" logo strip below the hero */
+.press-strip {
+    padding: max(4%, 32px) 0 32px;
+    text-align: center;
+}
+
+.press-strip-label {
+    margin-bottom: 24px;
+}
+
+/* Flex keeps every wrapped row centered; the .press-break spacers force
+   balanced row patterns (2+2+2+1 narrow, 4+3 desktop, one row of 7
+   ultra-wide) so wrapping never strands an item mid-range. */
+.press-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 36px;
+    row-gap: 24px;
+}
+
+.press-break {
+    flex-basis: 100%;
+    height: 0;
+    display: none;
+}
+
+.press-break-narrow {
+    display: block;
+}
+
+/* Breakpoints are set from measured row widths so each pattern always fits
+   inside skeleton's .container (80% of viewport, max 1140px). The full
+   4+3 pattern with large logos needs ~700px of container, so both the
+   pattern switch and the size bump happen together at 900px. */
+@media (min-width: 900px) {
+  .press-break-narrow {
+    display: none;
+  }
+
+  .press-break-mid {
+    display: block;
+  }
+}
+
+.press-logo {
+    color: var(--text);
+    opacity: 0.85;
+    display: inline-flex;
+    align-items: center;
+}
+
+.press-logo:hover {
+    color: var(--text);
+    opacity: 1;
+}
+
+.press-logo svg {
+    width: auto;
+}
+
+/* Heights tuned per wordmark so they read as the same optical size;
+   enlarged at 900px alongside the 4+3 pattern. */
+.press-logo-wapo svg { height: 26px; }
+.press-logo-macstories svg { height: 26px; }
+.press-logo-macrumors svg { height: 20px; }
+.press-logo-mashable svg { height: 22px; }
+
+.press-logo-macworld {
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+}
+
+.sixcolors-mask {
+    display: inline-block;
+    width: 112px;
+    height: 22px;
+    background: currentColor;
+    -webkit-mask: url(../images/press/sixcolors.png) no-repeat center / contain;
+    mask: url(../images/press/sixcolors.png) no-repeat center / contain;
+}
+
+/* Apple Developer callout badge */
+.press-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+    opacity: 0.85;
+    text-decoration: none;
+}
+
+.press-badge:hover {
+    color: var(--text);
+    opacity: 1;
+}
+
+.press-badge svg {
+    height: 24px;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.press-badge-text {
+    font-size: 0.8em;
+    line-height: 1.35;
+    text-align: left;
+}
+
+@media (min-width: 900px) {
+  .press-logo-wapo svg { height: 32px; }
+  .press-logo-macstories svg { height: 32px; }
+  .press-logo-macrumors svg { height: 24px; }
+  .press-logo-mashable svg { height: 26px; }
+  .press-logo-macworld { font-size: 26px; }
+  .sixcolors-mask { width: 136px; height: 27px; }
+  .press-badge svg { height: 28px; }
 }
 
 .presskit-img {
@@ -177,8 +321,8 @@ p {
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 680px) {
   .body-container {
-    padding-top: max(5%, 20px);
-    padding-bottom: max(5%, 20px);
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .image-row,
@@ -203,15 +347,12 @@ p {
     aspect-ratio: auto;
   }
 
+  /* Full, unclipped phones on desktop; the crop windows only apply to the
+     mobile stacked layout. */
   .screenshot-img {
     width: 60%;
     padding-left: 20%;
     height: auto;
-    margin-bottom: -50%;
-  }
-
-  .screenshot-img-clipped-bottom {
-    margin-top: -91%;
   }
 
   .right-screenshot {
@@ -224,6 +365,18 @@ p {
 
   .made-with {
     text-align: right;
+  }
+
+  .press-logos {
+    column-gap: 44px;
+  }
+
+  .press-strip {
+    padding-bottom: max(7%, 56px);
+  }
+
+  .press {
+    padding-top: max(12%, 96px);
   }
 }
 
