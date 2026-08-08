@@ -135,11 +135,10 @@
     mask: url(../images/press/sixcolors.png) no-repeat center / contain;
 }
 
-/* Apple Developer callout badge */
+/* Apple Developer brandmark */
 .press-badge {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
     color: var(--text);
     opacity: 0.85;
     text-decoration: none;
@@ -150,20 +149,12 @@
     opacity: 1;
 }
 
-/* The Apple Developer brandmark's letterforms sit lower in its viewBox
-   than the other wordmarks, so it gets a slightly taller box to match
-   their optical size. */
+/* The brandmark's letterforms sit lower in its viewBox than the other
+   wordmarks, so it gets a slightly taller box to match their optical
+   size. */
 .press-badge svg {
     height: 26px;
     width: auto;
-    flex-shrink: 0;
-}
-
-.press-badge-text {
-    font-size: 0.8em;
-    line-height: 1.35;
-    text-align: left;
-    white-space: nowrap;
 }
 
 @media (min-width: 900px) {
