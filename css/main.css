@@ -61,8 +61,8 @@
 }
 
 /* Flex keeps every wrapped row centered; the .press-break spacers force
-   balanced row patterns (2+2+2+1 narrow, 4+3 desktop, one row of 7
-   ultra-wide) so wrapping never strands an item mid-range. */
+   balanced row patterns (2+2+2 narrow, 3+3 desktop) so wrapping never
+   strands an item mid-range. */
 .press-logos {
     display: flex;
     flex-wrap: wrap;
@@ -84,7 +84,7 @@
 
 /* Breakpoints are set from measured row widths so each pattern always fits
    inside skeleton's .container (80% of viewport, max 1140px). The full
-   4+3 pattern with large logos needs ~700px of container, so both the
+   3+3 pattern with large logos needs ~570px of container, so both the
    pattern switch and the size bump happen together at 900px. */
 @media (min-width: 900px) {
   .press-break-narrow {
@@ -119,13 +119,6 @@
 .press-logo-macrumors svg { height: 20px; }
 .press-logo-mashable svg { height: 22px; }
 
-.press-logo-macworld {
-    font-weight: 700;
-    font-size: 22px;
-    letter-spacing: -0.02em;
-    text-decoration: none;
-}
-
 .sixcolors-mask {
     display: inline-block;
     width: 112px;
@@ -135,11 +128,10 @@
     mask: url(../images/press/sixcolors.png) no-repeat center / contain;
 }
 
-/* Apple Developer callout badge */
+/* Apple Developer brandmark */
 .press-badge {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
     color: var(--text);
     opacity: 0.85;
     text-decoration: none;
@@ -150,16 +142,12 @@
     opacity: 1;
 }
 
+/* The brandmark's letterforms sit lower in its viewBox than the other
+   wordmarks, so it gets a slightly taller box to match their optical
+   size. */
 .press-badge svg {
-    height: 24px;
+    height: 26px;
     width: auto;
-    flex-shrink: 0;
-}
-
-.press-badge-text {
-    font-size: 0.8em;
-    line-height: 1.35;
-    text-align: left;
 }
 
 @media (min-width: 900px) {
@@ -167,9 +155,8 @@
   .press-logo-macstories svg { height: 32px; }
   .press-logo-macrumors svg { height: 24px; }
   .press-logo-mashable svg { height: 26px; }
-  .press-logo-macworld { font-size: 26px; }
   .sixcolors-mask { width: 136px; height: 27px; }
-  .press-badge svg { height: 28px; }
+  .press-badge svg { height: 31px; }
 }
 
 .presskit-img {
