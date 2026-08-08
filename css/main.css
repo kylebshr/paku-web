@@ -150,8 +150,11 @@
     opacity: 1;
 }
 
+/* The Apple Developer brandmark's letterforms sit lower in its viewBox
+   than the other wordmarks, so it gets a slightly taller box to match
+   their optical size. */
 .press-badge svg {
-    height: 24px;
+    height: 26px;
     width: auto;
     flex-shrink: 0;
 }
@@ -160,6 +163,7 @@
     font-size: 0.8em;
     line-height: 1.35;
     text-align: left;
+    white-space: nowrap;
 }
 
 @media (min-width: 900px) {
@@ -169,7 +173,7 @@
   .press-logo-mashable svg { height: 26px; }
   .press-logo-macworld { font-size: 26px; }
   .sixcolors-mask { width: 136px; height: 27px; }
-  .press-badge svg { height: 28px; }
+  .press-badge svg { height: 31px; }
 }
 
 .presskit-img {
