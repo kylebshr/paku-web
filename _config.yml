@@ -1,5 +1,8 @@
 url: "https://paku.app"
 
+include:
+  - .well-known
+
 exclude:
   - Gemfile
   - Gemfile.lock

@@ -1,0 +1,80 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Paku - Shared Air Quality Sensor</title>
+  <meta name="description" content="Someone shared a PurpleAir air quality sensor with you. View it on the map in Paku.">
+
+  <meta property="og:url" content="https://paku.app/s">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Air quality sensor shared with Paku">
+  <meta property="og:description" content="View this PurpleAir sensor on the map in Paku.">
+  <meta property="og:image" content="https://paku.app/images/widget-card.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://paku.app/android-chrome-256x256.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-itunes-app" content="app-id=1534130193, app-clip-bundle-id=com.kylebashour.aqi-wtf.Clip, app-clip-display=card">
+
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/skeleton.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/light.css">
+
+  <meta name="theme-color" content="#181820" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="white">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5739ec">
+  <meta name="msapplication-TileColor" content="#ffffff">
+
+  <script src="https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js" data-app-id="C65919C7-3E1A-4C1C-BBCB-D43E38E60406"></script>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 10%">
+
+        <a href="../index.html"><img src="../images/app-icon-web.webp" width="100" height="100" alt="The Paku logo, an icon that represents wind"></a>
+
+        <br>
+        <br>
+
+        <h1>Someone shared an air quality sensor with you</h1>
+
+        <p>Open this link on an iPhone or iPad to see the sensor on the map in Paku, along with its live air quality reading. If you don’t have Paku yet, the link opens a lightweight preview — no install required.</p>
+
+        <p id="open-in-app" style="display: none;"><a id="open-in-app-link" href="#">Open in Paku</a></p>
+
+        <p>You can also view this sensor with all of Paku’s features — widgets, alerts, favorites, and more — by getting the app:</p>
+
+        <p>
+          <a href="https://apps.apple.com/app/apple-store/id1534130193?pt=117796349&ct=sensor-share&mt=8"><img width="150px" src="../images/app-store-badge.svg" alt="Download on the App Store"></a>
+        </p>
+
+        <script>
+          var id = new URLSearchParams(window.location.search).get("id");
+          if (id && /^\d+$/.test(id)) {
+            var link = document.getElementById("open-in-app-link");
+            link.href = "paku://show?id=" + id;
+            document.getElementById("open-in-app").style.display = "";
+          }
+        </script>
+
+      </div>
+    </div>
+  </div>
+
+  {% include footer.html %}
+
+</body>
+</html>

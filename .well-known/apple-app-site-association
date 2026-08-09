@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["ZEAD23GG77.com.kylebashour.aqi-wtf"],
+        "components": [
+          { "/": "/s", "?": { "id": "?*" } },
+          { "/": "/s/*" }
+        ]
+      }
+    ]
+  },
+  "appclips": {
+    "apps": ["ZEAD23GG77.com.kylebashour.aqi-wtf.Clip"]
+  }
+}
