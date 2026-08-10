@@ -15,21 +15,17 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 
-  <script>
-    var id = new URLSearchParams(window.location.search).get("id");
-    if (id && /^\d+$/.test(id)) {
-      window.location.replace("https://web.paku.app/s/" + id);
-    }
-  </script>
-
 </head>
 <body>
 
   <p>This sensor lives at <a id="share-link" href="https://web.paku.app/s">web.paku.app</a>.</p>
 
   <script>
+    var id = new URLSearchParams(window.location.search).get("id");
     if (id && /^\d+$/.test(id)) {
-      document.getElementById("share-link").href = "https://web.paku.app/s/" + id;
+      var url = "https://web.paku.app/s/" + id;
+      document.getElementById("share-link").href = url;
+      window.location.replace(url);
     }
   </script>
 
