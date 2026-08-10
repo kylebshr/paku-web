@@ -1,0 +1,33 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Paku - Shared Air Quality Sensor</title>
+  <meta name="description" content="Someone shared a PurpleAir air quality sensor with you. View it on the map in Paku.">
+  <meta name="robots" content="noindex">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-itunes-app" content="app-id=1534130193">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+
+</head>
+<body>
+
+  <p>This sensor lives at <a id="share-link" href="https://web.paku.app/s">web.paku.app</a>.</p>
+
+  <script>
+    var id = new URLSearchParams(window.location.search).get("id");
+    if (id && /^\d+$/.test(id)) {
+      var url = "https://web.paku.app/s/" + id;
+      document.getElementById("share-link").href = url;
+      window.location.replace(url);
+    }
+  </script>
+
+</body>
+</html>
