@@ -18,12 +18,12 @@
 </head>
 <body>
 
-  <p>This sensor lives at <a id="share-link" href="https://web.paku.app/s">web.paku.app</a>.</p>
+  <p>This sensor lives at <a id="share-link" href="https://paku.app/s">paku.app</a>.</p>
 
   <script>
     var id = new URLSearchParams(window.location.search).get("id");
     if (id && /^\d+$/.test(id)) {
-      var url = "https://web.paku.app/s/" + id;
+      var url = "https://paku.app/s/" + id;
       document.getElementById("share-link").href = url;
       window.location.replace(url);
     }
