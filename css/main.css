@@ -4,8 +4,17 @@
 
 /* One continuous backdrop for the whole page (hero through footer): soft
    glows drift from side to side down the page, so there are no hard band
-   edges to break. The top two layers rebuild the old hero gradient. */
-.body-flow {
+   edges to break. The top two layers rebuild the old hero gradient.
+   Lives on <html> so it propagates to the canvas, which fills the
+   overscroll area.
+
+   The toolbar tint is a separate problem: Safari samples background-COLOR
+   only and ignores background-image, so the gradient itself can never reach
+   the nav bar. Instead the base color carries a hint of the glow, so the
+   flat color Safari picks blends into the wash rather than reading as a
+   white/near-black band against it. */
+html.body-flow {
+    --background: #1f1933;
     --glow-soft: color-mix(in srgb, var(--glow) 45%, transparent);
     --gw-hero: 120%;
     --gw-hero2: 90%;
@@ -18,10 +27,21 @@
         radial-gradient(var(--gw) 24% at 100% 88%, var(--glow-soft), transparent 70%);
 }
 
+@media (prefers-color-scheme: light) {
+  html.body-flow {
+    --background: #f7f2ff;
+  }
+}
+
+/* Skeleton paints an opaque background here, which would cover the canvas. */
+html.body-flow body {
+    background-color: transparent;
+}
+
 /* Narrow screens are tall relative to their width, so percent-sized glows
    turn into skinny slivers; widen them to keep the wash spanning the page. */
 @media (max-width: 679px) {
-  .body-flow {
+  html.body-flow {
     --gw-hero: 300%;
     --gw-hero2: 220%;
     --gw: 260%;

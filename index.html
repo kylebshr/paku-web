@@ -1,7 +1,7 @@
 ---
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="body-flow">
 <head>
   <meta charset="utf-8">
 
@@ -25,7 +25,9 @@
   <meta name="twitter:description" content="Keep an eye on air quality with widgets, alerts, and more. Available on iOS, watchOS and macOS.">
   <meta name="twitter:image" content="https://paku.app/images/widget-card.png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- viewport-fit=cover: without it Safari fills the safe-area gap with a
+       solid bar instead of letting the page reach the toolbar. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="apple-itunes-app" content="app-id=1534130193">
 
   <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Roboto'>
@@ -34,8 +36,11 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/light.css">
 
-  <meta name="theme-color" content="#181820" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="white">
+  <!-- Safari 26 ignores these and samples the root background-color instead,
+       but Chrome and older Safari still use them. Keep in sync with the
+       --background values in main.css. -->
+  <meta name="theme-color" content="#1f1933" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f7f2ff">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -55,7 +60,6 @@
 
 </head>
 <body>
-  <div class="body-flow">
 
   <div class="header-container">
     <div class="container">
@@ -211,8 +215,6 @@
   </div>
 
   {% include footer.html %}
-
-  </div>
 
 </body>
 </html>
