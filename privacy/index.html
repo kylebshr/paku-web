@@ -58,32 +58,41 @@
 
         <h5>Personal Information</h5>
 
-        <p>Paku’s app developer cares deeply about your privacy. Paku doesn’t require an account, and doesn’t collect personal information such as your name, email address, or contacts.</p>
+        <p>Paku’s app developer cares deeply about your privacy. Paku doesn’t require an account, and doesn’t ask for personal information such as your name or email address. Instead, Paku generates a random, anonymous identifier for you, which is used to store things like your alerts and private sensors on our servers. If you’re signed in to iCloud, an anonymous, app-specific iCloud identifier is also used, so that your devices can be linked to the same anonymous user. Neither identifier reveals who you are.</p>
+        <p>The one exception: adding a private sensor requires the sensor owner’s email address, described below.</p>
 
         <h5>Location</h5>
 
         <p>Paku uses the location services of your device to determine which AQI values to display. Your location is processed on your device, and is not included in analytics. Your exact location never leaves your device.</p>
-        <p>When you add a private sensor to Paku, the location of that sensor is reported to us by PurpleAir. That location is stored on our servers so that the application can display the sensor on the map (just like public sensors). The location may be revealed to other users, in the form of the sensor appearing on the map, or through our API. If you’re uncomfortable with the location of your private sensor being used this way, you should not add the private sensor to Paku.</p>
+        <p>When you add a private sensor to Paku, you provide the sensor’s ID and the sensor owner’s email address, which are stored on our servers and used to access the sensor’s data from PurpleAir. The location of that sensor is reported to us by PurpleAir. That location is stored on our servers so that the application can display the sensor on the map (just like public sensors). The location may be revealed to other users, in the form of the sensor appearing on the map, or through our API. If you’re uncomfortable with the location of your private sensor being used this way, you should not add the private sensor to Paku.</p>
+
+        <h5>Alerts and Notifications</h5>
+
+        <p>If you set up an AQI alert for a sensor, the sensor’s ID and your alert settings (such as the threshold) are stored on our servers, along with your device’s push notification token, so we can send you notifications. The push token is an identifier created by Apple for delivering notifications to your device; it doesn’t reveal who you are.</p>
 
         <h5>Nearby Alerts and Automatic Live Activities</h5>
 
-        <p>If you enable Nearby Alerts or Automatic Live Activities, Paku finds the sensor nearest to you on your device, and sends the identifier of that sensor to our servers so we can notify you when its readings change. Your exact location is never sent to us — only which sensor is nearest to you — but because sensor locations are public, this implies your approximate location. This information is used only to deliver these features.</p>
+        <p>If you enable Nearby Alerts or Automatic Live Activities, Paku finds the sensor nearest to you on your device, and sends the identifier of that sensor (and your approximate distance from it) to our servers so we can notify you when its readings change. Your exact location is never sent to us — only which sensor is nearest to you — but because sensor locations are public, this implies your approximate location. This information is used only to deliver these features.</p>
+
+        <h5>iCloud</h5>
+
+        <p>Your favorites and settings are synced between your devices using your iCloud account. This data is stored by Apple, not on our servers.</p>
 
         <h5>Analytics</h5>
 
         <p>Paku uses TelemetryDeck to collect anonymous usage data, such as app launches. By using Paku, you are subject to <a href="https://telemetrydeck.com/privacy/" target="_blank">TelemetryDeck’s Privacy Policy</a>. Our website, paku.app, also uses TelemetryDeck for anonymous analytics. Apple may also send anonymous analytics information to the developer, if you have opted in to sharing analytics with app developers.</p>
 
-        <h5>PurpleAir</h5>
+        <h5>PurpleAir and AirNow</h5>
 
-        <p>Paku uses PurpleAir sensor data. By using Paku, you are subject to <a href="https://www2.purpleair.com/policies/privacy-policy" target="_blank">PurpleAir’s Privacy Policy</a>. Your location is never sent to PurpleAir.</p>
+        <p>Paku uses PurpleAir sensor data. By using Paku, you are subject to <a href="https://www2.purpleair.com/policies/privacy-policy" target="_blank">PurpleAir’s Privacy Policy</a>. Paku also displays air quality data from AirNow, a service of the U.S. EPA and its partner agencies. Air quality data is fetched through our servers, and your location is never sent to PurpleAir or AirNow.</p>
 
         <h5>RevenueCat</h5>
 
-        <p>Paku uses RevenueCat to manage subscriptions. By using Paku, you are subject to <a href="https://www.revenuecat.com/privacy/" target="_blank">RevenueCat’s Privacy Policy</a>.</p>
+        <p>Paku uses RevenueCat to manage subscriptions. Your anonymous identifier is shared with RevenueCat to keep track of your purchases. By using Paku, you are subject to <a href="https://www.revenuecat.com/privacy/" target="_blank">RevenueCat’s Privacy Policy</a>.</p>
 
         <h5>Your Data</h5>
 
-        <p>The small amount of data we store — such as private sensors you’ve added, or the sensor associated with your alerts — doesn’t directly identify you. If you’d like it removed from our servers, email <a href="mailto:support@paku.app">support@paku.app</a> and we’ll delete it. Depending on where you live (for example, the European Economic Area, the United Kingdom, or California), you may have additional legal rights to access, correct, or delete data about you; you can exercise those rights the same way.</p>
+        <p>Aside from the email address associated with a private sensor, the data we store — such as your anonymous identifiers, push tokens, alerts, and private sensors you’ve added — doesn’t directly identify you. If you’d like any of it removed from our servers, email <a href="mailto:support@paku.app">support@paku.app</a> and we’ll delete it. Depending on where you live (for example, the European Economic Area, the United Kingdom, or California), you may have additional legal rights to access, correct, or delete data about you; you can exercise those rights the same way.</p>
 
         <h5>Children</h5>
 
