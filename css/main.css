@@ -293,7 +293,7 @@ p {
 @media (min-width: 680px) {
   .donation-list {
     display: grid;
-    grid-template-columns: 130px 1fr auto;
+    grid-template-columns: 150px 1fr auto;
     align-items: baseline;
     column-gap: 12px;
     row-gap: 12px;
