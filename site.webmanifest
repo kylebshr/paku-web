@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Paku for PurpleAir",
+    "short_name": "Paku",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
