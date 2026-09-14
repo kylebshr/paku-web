@@ -224,7 +224,7 @@ html.body-flow body {
 }
 
 h1 {
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     font-weight: 700;
     opacity: 0.85;
 }
@@ -318,6 +318,19 @@ p {
   .donation-receipt {
     grid-column: 3;
   }
+}
+
+/* Social proof under the App Store badge */
+.rating {
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-size: 1.4rem;
+    opacity: 0.8;
+}
+
+.rating-stars {
+    letter-spacing: 0.1em;
+    margin-right: 4px;
 }
 
 .footer-link {

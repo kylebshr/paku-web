@@ -1,5 +1,32 @@
 url: "https://paku.app"
 
+plugins:
+  - jekyll-sitemap
+
+# Keep the sitemap to pages: leave images, styles, receipts and the press
+# zip out of it.
+defaults:
+  - scope:
+      path: "images"
+    values:
+      sitemap: false
+  - scope:
+      path: "css"
+    values:
+      sitemap: false
+  - scope:
+      path: "giving/receipts"
+    values:
+      sitemap: false
+  - scope:
+      path: "press/images.zip"
+    values:
+      sitemap: false
+  - scope:
+      path: "s"
+    values:
+      sitemap: false
+
 include:
   - .well-known
 
